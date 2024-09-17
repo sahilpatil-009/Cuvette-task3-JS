@@ -37,12 +37,12 @@ function addToDisplay(x) {
 
 function deleteLastDigit() {
   let value = output.value;
+  ResetStyle();
   if (value.length > 1) {
     let newVal = value.substring(0, value.length - 1);
     output.value = newVal;
   } else {
     output.value = "0";
-    ResetStyle();
   }
 }
 
@@ -75,6 +75,7 @@ function Evaluate() {
     }
     deleteCal();
     addToDisplay(result);
-    ResetStyle();
+    output.style.backgroundColor = "black";
+    headtxt.style.color = "black";
   }
 }
